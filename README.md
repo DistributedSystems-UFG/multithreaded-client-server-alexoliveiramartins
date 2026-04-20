@@ -1,13 +1,13 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/yQPZ0SBC)
 
 
-## Testes single threaded:
+## Resultados dos testes:
 
 Requisições | Single Threaded (Serv+Clien) | Multitreaded (Serv+Client) | Multithreaded (Serv) |
 -|-|-|-|
-100_000 | 77.8804s | 78.1447s | |
-10_000 | 7.0706s | 5.1915s | |
-1_000 | 0.6868s | 1.3289s | | 
+100_000 | 77.8804s | 78.1447s | 90.4288s |
+10_000 | 7.0706s | 5.1915s | 9.0381s |
+1_000 | 0.6868s | 1.3289s | 0.8606s | 
 
 ## Conclusão
 
@@ -17,5 +17,11 @@ começam a mandar/receber requisições mais lentamente. Provavelmente
 isso é causado por overhead de uso de uma thread por requisição;
 Já o single threaded segue no mesmo ritmo do começo ao fim.
 
+- Server + Client Multithreaded
 <img src="media/multithread.gif" />
+
+- Server + Client Single Threaded
 <img src="media/singlethread.gif" />
+
+- Server Multi Threaded + Client Single Threaded
+<img src="media/MultiServerSingleClient.gif" />
